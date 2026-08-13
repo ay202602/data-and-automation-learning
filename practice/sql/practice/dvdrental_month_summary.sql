@@ -1,3 +1,4 @@
+-- 月次レンタル数を集計するクエリ
 SELECT
     DATE_TRUNC('month', rental_date) AS rental_month,
     COUNT(p.rental_id),
