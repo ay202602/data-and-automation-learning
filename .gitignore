@@ -218,13 +218,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Data Science files
-FEI_PREF_*.csv
-
 # Claude Code files
 .claude
 
-# Data Base Folder
-dvdrental.tar
+# Data Folder
+data/ 
 
 # End of https://www.toptal.com/developers/gitignore/api/python,windows,visualstudiocode
