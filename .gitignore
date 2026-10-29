@@ -218,9 +218,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Claude Code files
-.claude
-
 # Data Folder
 data/
 excelfiles/
