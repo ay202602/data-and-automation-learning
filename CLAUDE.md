@@ -21,6 +21,7 @@
 
 # 規約
 - Pythonファイル名は `ライブラリ名_内容.py`（snake_case）
+- PythonのコードはPylance(standard)に則ったコーディングを行う
 - SQLファイル名は `dvdrental_内容.sql`
 - コメントは日本語で書いてよい
 - `data/` と `excelfiles/` のファイルは勝手に変更しない
