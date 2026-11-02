@@ -34,6 +34,10 @@
 | LEFT JOIN ... WHERE 右側 IS NULL | 未結合の抽出 | dvdrental_not_rental_inventory |
 | FETCH FIRST n ROWS WITH TIES | 同順位を含む上位n件 | dvdrental_top_rental_count |
 | 列別名（AS）をGROUP BY/ORDER BYで使う | PostgreSQLの書き方 | 複数 |
+| MAX() OVER () | 全行に全体の最大値を付ける（基準日の算出）。GROUP BY の結果に対する2段階集計 | dvdrental_dormant_customer |
+| interval 型どうしの比較 | `(日付 - 日付) >= INTERVAL '90 days'` で経過期間を絞り込む | dvdrental_dormant_customer |
+| boolean 列を WHERE に直接書く | `WHERE c.activebool`（= TRUE と同義。NULL は除外される） | dvdrental_dormant_customer |
+| データの事前確認 | `LIMIT 5` で中身、`MIN/MAX` で範囲を確認。**まだ自信がないため要練習** | dvdrental_dormant_customer |
 
 ## 未習（例・今後の候補）
 - SUM() OVER (ORDER BY ...)（累計）、ROWS BETWEEN によるフレーム指定（移動平均）
@@ -41,6 +45,7 @@
 - HAVING、サブクエリ（IN / スカラー）、UNION / INTERSECT / EXCEPT
 - COALESCE、FILTER (WHERE ...)、LATERAL、再帰CTE
 - CROSS JOIN、generate_series、STRING_AGG
+- データの事前確認方法（表に追加済みだが要練習）
 
 ※「未習（例）」は照合の目安。ノートブック本文までは精査していないため、
 　ユーザーが「それは習った」と言ったら上の表に移す。
